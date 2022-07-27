@@ -59,6 +59,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc : ClosedPRViewController = ClosedPRViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
