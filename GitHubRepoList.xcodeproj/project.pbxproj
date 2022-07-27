@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A943E032891194C00A7AC62 /* ClosedPRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A943E012891194C00A7AC62 /* ClosedPRViewController.swift */; };
+		8A943E042891194C00A7AC62 /* ClosedPRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A943E022891194C00A7AC62 /* ClosedPRViewController.xib */; };
+		8A943E082891203400A7AC62 /* ClosedPRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A943E072891203400A7AC62 /* ClosedPRViewModel.swift */; };
+		8A943E0A289120EE00A7AC62 /* ClosedPR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A943E09289120EE00A7AC62 /* ClosedPR.swift */; };
+		8A943E0D2891224D00A7AC62 /* ClosedPRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A943E0B2891224D00A7AC62 /* ClosedPRTableViewCell.swift */; };
+		8A943E0E2891224D00A7AC62 /* ClosedPRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A943E0C2891224D00A7AC62 /* ClosedPRTableViewCell.xib */; };
+		8A943E102891290600A7AC62 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A943E0F2891290600A7AC62 /* Extension.swift */; };
 		8AA15E6E288415DA005A7D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA15E6D288415DA005A7D75 /* AppDelegate.swift */; };
 		8AA15E70288415DA005A7D75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA15E6F288415DA005A7D75 /* SceneDelegate.swift */; };
 		8AA15E77288415DE005A7D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA15E76288415DE005A7D75 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A943E012891194C00A7AC62 /* ClosedPRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRViewController.swift; sourceTree = "<group>"; };
+		8A943E022891194C00A7AC62 /* ClosedPRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosedPRViewController.xib; sourceTree = "<group>"; };
+		8A943E072891203400A7AC62 /* ClosedPRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRViewModel.swift; sourceTree = "<group>"; };
+		8A943E09289120EE00A7AC62 /* ClosedPR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPR.swift; sourceTree = "<group>"; };
+		8A943E0B2891224D00A7AC62 /* ClosedPRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedPRTableViewCell.swift; sourceTree = "<group>"; };
+		8A943E0C2891224D00A7AC62 /* ClosedPRTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosedPRTableViewCell.xib; sourceTree = "<group>"; };
+		8A943E0F2891290600A7AC62 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8AA15E6A288415DA005A7D75 /* GitHubRepoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA15E6D288415DA005A7D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA15E6F288415DA005A7D75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +114,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A943E002891191B00A7AC62 /* ClosedPR */ = {
+			isa = PBXGroup;
+			children = (
+				8A943E062891201600A7AC62 /* Models */,
+				8A943E052891200B00A7AC62 /* Cells */,
+				8A943E012891194C00A7AC62 /* ClosedPRViewController.swift */,
+				8A943E022891194C00A7AC62 /* ClosedPRViewController.xib */,
+			);
+			path = ClosedPR;
+			sourceTree = "<group>";
+		};
+		8A943E052891200B00A7AC62 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A943E0B2891224D00A7AC62 /* ClosedPRTableViewCell.swift */,
+				8A943E0C2891224D00A7AC62 /* ClosedPRTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A943E062891201600A7AC62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A943E072891203400A7AC62 /* ClosedPRViewModel.swift */,
+				8A943E09289120EE00A7AC62 /* ClosedPR.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8AA15E61288415D9005A7D75 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +206,7 @@
 		8AA15EA22884184E005A7D75 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8A943E002891191B00A7AC62 /* ClosedPR */,
 				8AA15EAB2884219A005A7D75 /* Profile */,
 			);
 			path = Controllers;
@@ -223,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				8AAEC65F2889C0460009C73C /* ImageLoader.swift */,
+				8A943E0F2891290600A7AC62 /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,7 +386,9 @@
 			files = (
 				8AA15E7A288415DE005A7D75 /* LaunchScreen.storyboard in Resources */,
 				8AA15EB528843376005A7D75 /* ProfileTableViewCell.xib in Resources */,
+				8A943E042891194C00A7AC62 /* ClosedPRViewController.xib in Resources */,
 				8AA15E77288415DE005A7D75 /* Assets.xcassets in Resources */,
+				8A943E0E2891224D00A7AC62 /* ClosedPRTableViewCell.xib in Resources */,
 				8AA15EA628841890005A7D75 /* ProfileViewController.xib in Resources */,
 				8AA15EB928844A53005A7D75 /* RepoTableViewCell.xib in Resources */,
 			);
@@ -368,12 +415,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A943E082891203400A7AC62 /* ClosedPRViewModel.swift in Sources */,
 				8AA15EAE288421D3005A7D75 /* ProfileInfo.swift in Sources */,
 				8AA15EAA28842145005A7D75 /* NetworkManager.swift in Sources */,
 				8AAEC6602889C0460009C73C /* ImageLoader.swift in Sources */,
 				8AA15EA528841890005A7D75 /* ProfileViewController.swift in Sources */,
+				8A943E0A289120EE00A7AC62 /* ClosedPR.swift in Sources */,
 				8AAEC65D2889B1AF0009C73C /* RepoInfo.swift in Sources */,
+				8A943E0D2891224D00A7AC62 /* ClosedPRTableViewCell.swift in Sources */,
 				8AA15EB828844A53005A7D75 /* RepoTableViewCell.swift in Sources */,
+				8A943E102891290600A7AC62 /* Extension.swift in Sources */,
+				8A943E032891194C00A7AC62 /* ClosedPRViewController.swift in Sources */,
 				8AA15EB428843376005A7D75 /* ProfileTableViewCell.swift in Sources */,
 				8AAEC6632889C0D80009C73C /* Constants.swift in Sources */,
 				8AA15E6E288415DA005A7D75 /* AppDelegate.swift in Sources */,

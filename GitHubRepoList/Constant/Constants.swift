@@ -17,6 +17,7 @@ struct Constants
     {
         static let ProfileTableViewCell = "ProfileTableViewCell"
         static let RepoTableViewCell = "RepoTableViewCell"
+        static let ClosedPRTableviewCell = "ClosedPRTableViewCell"
 
      
     }
