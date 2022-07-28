@@ -15,13 +15,13 @@ class ClosedPRViewModel{
     
     var ClosedPRInfo : [ClosedPR]?
     weak var delegate: ClosedPRVMDelegate?
+    var repoName:String?
 
     init(){
-        getClosedPRInfo()
     }
     
     func getClosedPRInfo(){
-        NetworkManger.sharedInstance.fetchGenericData(urlString: "https://api.github.com/repos/amanchawla96/navi-challange/pulls?state=closed") { [weak self](ProfileDetails: [ClosedPR]) in
+        NetworkManger.sharedInstance.fetchGenericData(urlString: "\(Constants.url.frontURL)\(repoName ?? "")\(Constants.url.endURL)") { [weak self](ProfileDetails: [ClosedPR]) in
             self?.ClosedPRInfo = ProfileDetails
             print("ClosedPRInfo:\(String(describing: self?.ClosedPRInfo))")
             self?.delegate?.reloadTable()

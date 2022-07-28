@@ -31,10 +31,10 @@ class ProfileTableViewCell: UITableViewCell {
         self.nameLabel.text = model.name
         self.idLabel.text = model.login
         if let followers = model.followers{
-            self.followersLabel.text = "Followers: \(followers)"
+            self.followersLabel.text = "\(Constants.strings.followers)\(followers)"
         }
         if let following = model.following{
-            self.followingLabel.text = "Following: \(following)"
+            self.followingLabel.text = "\(Constants.strings.following)\(following)"
         }
         self.profileImage.url(Constants.url.imageurl)
     }

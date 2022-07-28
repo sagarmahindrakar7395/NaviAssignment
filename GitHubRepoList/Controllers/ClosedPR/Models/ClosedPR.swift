@@ -11,4 +11,10 @@ struct ClosedPR : Decodable{
     var title: String?
     var created_at: String?
     var closed_at: String?
+    var number: Int?
+    var user: User?
+}
+
+struct User: Decodable{
+    var login: String?
 }

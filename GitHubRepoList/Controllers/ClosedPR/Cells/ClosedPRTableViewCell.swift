@@ -12,9 +12,11 @@ class ClosedPRTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var closedAtLabel: UILabel!
+    @IBOutlet weak var backView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        backView.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,15 +26,13 @@ class ClosedPRTableViewCell: UITableViewCell {
     
     func populate(model:ClosedPR){
         self.titleLabel.text = model.title
-        self.createdAtLabel.text = model.created_at
-        if let date = model.closed_at{
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        var dates =  dateFormatter.date(from: date)
-            self.closedAtLabel.text = dates?.timeAgoDisplay()
+        if let createdAt = model.created_at?.toDateString(){
+            self.createdAtLabel.text = "Created At: \(createdAt) ago"
         }
-    }
+        if let number = model.number, let login = model.user?.login, let closedAt = model.closed_at?.toDateString(){
+            self.closedAtLabel.text = "#\(number) by \(login) was merged \(closedAt) ago"
+        }
+        }
 
     
 }

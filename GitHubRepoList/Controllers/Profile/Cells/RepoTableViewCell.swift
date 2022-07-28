@@ -10,10 +10,11 @@ import UIKit
 class RepoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var repoNameLabel: UILabel!
-    
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var languageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backView.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
