@@ -33,7 +33,6 @@ extension ClosedPRViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.strings.ClosedPRTableviewCell, for: indexPath) as? ClosedPRTableViewCell{
-            
             if let model = viewModel.ClosedPRInfo?[indexPath.row]{
             cell.populate(model: model)
         }

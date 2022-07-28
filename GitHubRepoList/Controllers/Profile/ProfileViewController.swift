@@ -54,6 +54,9 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
         case .repos:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.strings.RepoTableViewCell, for: indexPath) as! RepoTableViewCell
             cell.repoNameLabel.text = viewModel.repoInfo?[indexPath.row].name
+            if let lang = viewModel.repoInfo?[indexPath.row].language{
+                cell.languageLabel.text = "\(Constants.strings.language)\(lang)"
+            }
             return cell
         default:
             return UITableViewCell()
@@ -62,6 +65,8 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : ClosedPRViewController = ClosedPRViewController()
+        vc.viewModel.repoName = viewModel.repoInfo?[indexPath.row].name
+        vc.viewModel.getClosedPRInfo()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

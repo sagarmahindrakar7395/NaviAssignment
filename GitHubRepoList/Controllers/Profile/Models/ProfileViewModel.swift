@@ -23,7 +23,7 @@ class ProfileViewModel{
     }
     
     func getProfileInfo(){
-        NetworkManger.sharedInstance.fetchGenericData(urlString: "https://api.github.com/users/sagarmahindrakar7395") { [weak self](ProfileDetails: ProfileInfoModel) in
+        NetworkManger.sharedInstance.fetchGenericData(urlString: Constants.url.profileInfo) { [weak self](ProfileDetails: ProfileInfoModel) in
             self?.profileInfo = ProfileDetails
             print("ProfileDetails:\(String(describing: self?.profileInfo))")
             self?.delegate?.reloadTable()
@@ -32,7 +32,7 @@ class ProfileViewModel{
     }
     
     func getRepoInfo(){
-        NetworkManger.sharedInstance.fetchGenericData(urlString: "https://api.github.com/users/sagarmahindrakar7395/repos") { [weak self](ProfileDetails: [Repositery]) in
+        NetworkManger.sharedInstance.fetchGenericData(urlString: Constants.url.repoInfo) { [weak self](ProfileDetails: [Repositery]) in
             self?.repoInfo = ProfileDetails
             print("repoInfo:\(String(describing: self?.repoInfo))")
             self?.delegate?.reloadTable()
